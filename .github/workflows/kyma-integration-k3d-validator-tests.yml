@@ -4,11 +4,11 @@ on:
     branches: [ main ]
   pull_request:
 jobs:
-  test:
+  test-validator:
     runs-on: ubuntu-latest
     steps:
       - uses: azure/setup-helm@v4.1.0
-        id: install
+        id: install-helm
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Set up go environment
